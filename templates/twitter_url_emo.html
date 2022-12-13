@@ -1,0 +1,160 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/4cc19d605c.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+  <title>Sentiment analisys</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+			{% for key, value in data.items() %}
+				{% if value is string %}
+					['{{ key }}', '{{ value }}'],
+				{% else %}
+					['{{ key }}', {{ value }}],
+				{% endif %}
+			{% endfor %}
+        ]);
+
+
+
+
+      var options = {
+        title: 'URl:{{Title}}',
+        is3D: true,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+
+<body>
+  <header id="header-twitter">
+    <div class="container">
+      <div id="main-nav" class="menu-wrap">
+        <a href="/">
+          <h2 id="logo"> sea </h2>
+        </a>
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+          <div></div>
+        </div>
+        <div class="menu">
+
+          <div>
+            <div>
+
+              <ul>
+
+                <li><a href="/" class=" nav-btn" alt="My Portfolio">ホーム </a>
+                </li>
+                <li><a href="/sen_home" class="nav-btn">ポジネガ分析</a></li>
+                <li><a href="/emo_home" class="current nav-btn">感情分析</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-content twthead">
+        <h1> 感情分析</h1>
+        <p class="lead"> ツイートを分類する
+          <span class="type-box" data-wait="500" data-content='["ポジティブ","ニュートラル", "また", "ネガティブ"]'></span>
+        </p>
+
+        <form action="/twitter_url_emo_result" method="post" class="form">
+            <label for="url"></label>
+            <input type="text" name="url" placeholder="url">
+            <button type="submit" class="btnsend"><i class="fa fa-twitter"></i> <span>send</span></button>
+        </form>
+
+      </div>
+      <!-- <div class="bird"></div> -->
+
+
+    </div>
+  </header>
+  <section id="home-c " class="text-center twtkey py-2">
+    <div class="container">
+        {%if tweets%}
+      <h2 class="section-title">Result</h2>
+      <div class="bottom-line"></div>
+      <div class="tbl-header" data-aos="fade-up" data-aos-delay="700">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <thead>
+            <tr>
+              <th>
+                <h3 style="color:white; font-weight: 500;">Tweet</h3>
+              </th>
+              <th>
+                <h3 style="color:white; font-weight: 500;">Sentiment</h3>
+              </th>
+              <th>
+                <h3 style="color:white; font-weight: 500;">Emotag</h3>
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbl-content" data-aos="fade-up" data-aos-delay="700">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tbody>
+            {% for i,j in tweets %}
+            <tr>
+              <td>{{i}}</td>
+              <td>{{j}}</td>
+              {% if j == 'joy' %}
+              <td><p>&#128516;</p></td>
+              {% endif %}
+              {% if j== 'anger' %}
+              <td><p>&#128545;</p></td>
+              {% endif %}
+              {% if j == 'fear' %}
+              <td><p>&#128561;</p></td>
+              {% endif %}
+              {% if j== 'love' %}
+              <td><p>&#128525;</p></td>
+              {% endif %}
+              {% if j== 'surprise' %}
+              <td><p>&#128562;</p></td>
+              {% endif %}
+              {% if j== 'sadness' %}
+              <td><p>&#128546;</p></td>
+              {% endif %}
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <br><br>
+      <div id="piechart_3d" style="width: 500px; height: 350px;"></div>
+      {%else%}
+      <p></p>
+      {% endif %}
+    </div>
+    </div>
+
+    </div>
+  </section>
+  <footer id="main-footer"></footer>
+  <script src="{{ url_for('static',filename='js/typewriter.js') }}"> </script>
+  <script src="{{ url_for('static',filename='js/words.js') }}"> </script>
+  <script src="{{ url_for('static',filename='js/table.js') }}"> </script>
+</body>
+
+</html>
+{% endblock %}

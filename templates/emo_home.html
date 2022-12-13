@@ -1,0 +1,88 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4cc19d605c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <title>Sentiment analisys</title>
+</head>
+
+<body>
+    <header id="header-home">
+        <div class="container">
+            <div id="main-nav" class="menu-wrap">
+                <a href="/">
+                    <h2 id="logo"> sea </h2>
+                </a>
+                <input type="checkbox" class="toggler">
+                <div class="hamburger">
+                    <div></div>
+                </div>
+                <div class="menu">
+
+                    <div>
+                        <div>
+
+                            <ul>
+
+                                <li><a href="/" class=" nav-btn" alt="My Portfolio">ホーム </a>
+                                </li>
+                                <li><a href="/sen_home" class="nav-btn">ポジネガ分析</a></li>
+                                <li><a href="/emo_home" class="current nav-btn">感情分析</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-content">
+                <h1>感情分析</h1>
+                <p class="lead"> ツイートを分類する
+                    <span class="type-box" data-wait="500"
+                        data-content='["joy","love", "sad", "anger","fear","surprise"]'></span>
+                </p>
+                <a href="/input_emo" class="btn-light">文章を入力</a>
+                <p><br></p>
+                <a href="/twitter_home_emo" class="btn-light">ツイッターから</a>
+            </div>
+        </div>
+    </header>
+    <!-- section c: Project process -->
+    <section id="home-c" class="text-center py-2">
+        <div class="container">
+            <h2 class="section-title">何ができる？</h2>
+            <div class="bottom-line"></div>
+            <div class="process">
+                <div>
+                    <a href="/twitter_home_emo"><i class="fas fa-cloud-download-alt fa-4x process-icon my-2"></i>
+                        <h3>ライブツイートをインポートする</h3>
+                    </a>
+                    <p>ターゲットのTwitterハンドルまたはハッシュタグを使用してライブツイートをインポートし、感情分析を実行できます</p>
+                </div>
+                <div>
+                    <a href="/input_emo" class="ico">
+                        <i class="fas fa-keyboard fa-4x process-icon my-2"></i>
+                        <h3>独自のテキストを入力してください</h3>
+                    </a>
+                    <p>自分のツイートを生の形式で入力して、感情分析を実行できます</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- main footer -->
+    <footer id="main-footer"></footer>
+    <script src="{{ url_for('static',filename='js/typewriter.js') }}"> </script>
+</body>
+
+</html>
+{% endblock %}

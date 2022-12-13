@@ -1,0 +1,1263 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Montserrat:wght@600&family=Roboto&display=swap");
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+.btn-main, .btn-light, .btn-dark, .btn-green {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px; }
+
+.clear {
+  color: #044ebd00; }
+
+.btn-main {
+  color: #333;
+  background: #f77c09e8; }
+
+.btn-light {
+  color: #333;
+  background: #f4f4f4; }
+
+.btn-dark {
+  color: #f4f4f4;
+  background: #153fcaa9; }
+
+.btn-green {
+  color: #f4f4f4;
+  background: rgba(21, 119, 21, 0.726); }
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: #f77c09e8; }
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem; }
+
+.text-center {
+  text-align: center; }
+
+.bottom-line {
+  height: 2px;
+  width: 5rem;
+  background: #f77c09e8;
+  display: block;
+  margin: 0 auto 1rem auto; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase; }
+
+table {
+  width: 100%;
+  table-layout: fixed; }
+
+.tbl-header {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.tbl-content {
+  height: 500px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3); }
+
+th {
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase; }
+
+td {
+  padding: 15px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1); }
+  td p {
+    font-size: 50px; }
+
+.form {
+  padding: 20px 0;
+  position: relative;
+  z-index: 2; }
+  .form input {
+    appearance: none;
+    outline: 0;
+    border: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 250px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #11bcff;
+    transition-duration: 0.25s;
+    font-weight: 300; }
+    .form input:hover {
+      background-color: fade(white, 40%); }
+    .form input:focus {
+      background-color: white;
+      width: 300px;
+      color: #333; }
+  .form .btnsend {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(#d6ecfe 0%, #044ebd 100%);
+    background-image: linear-gradient(#d6ecfe 0% 0%, #0783d6 100%);
+    border: none; }
+  .form .btnsend:active {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.32);
+    background-image: -webkit-linear-gradient(#4d4849 0%, #443f3f 100%);
+    background-image: linear-gradient(#31161f 0%, #3a2929 100%); }
+
+@-webkit-keyframes square {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-700px) rotate(600deg); } }
+
+@keyframes square {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-700px) rotate(600deg); } }
+
+.emoji {
+  width: 120px;
+  height: 120px;
+  margin: 15px 15px 40px;
+  background: #ffda6a;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative; }
+  .emoji:after {
+    position: absolute;
+    bottom: -40px;
+    font-size: 18px;
+    width: 60px;
+    left: calc(50% - 30px);
+    color: #8a8a8a; }
+
+.emoji__face,
+.emoji__eyebrows,
+.emoji__eyes,
+.emoji__mouth,
+.emoji__tongue,
+.emoji__heart,
+.emoji__hand,
+.emoji__thumb {
+  position: absolute; }
+  .emoji__face:before, .emoji__face:after,
+  .emoji__eyebrows:before,
+  .emoji__eyebrows:after,
+  .emoji__eyes:before,
+  .emoji__eyes:after,
+  .emoji__mouth:before,
+  .emoji__mouth:after,
+  .emoji__tongue:before,
+  .emoji__tongue:after,
+  .emoji__heart:before,
+  .emoji__heart:after,
+  .emoji__hand:before,
+  .emoji__hand:after,
+  .emoji__thumb:before,
+  .emoji__thumb:after {
+    position: absolute;
+    content: ""; }
+
+.emoji__face {
+  width: inherit;
+  height: inherit; }
+
+.emoji--like {
+  background: #548dff; }
+  .emoji--like:after {
+    content: "Like"; }
+  .emoji--like .emoji__hand {
+    left: 25px;
+    bottom: 30px;
+    width: 20px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 5px;
+    z-index: 0;
+    animation: hands-up 2s linear infinite; }
+    .emoji--like .emoji__hand:before {
+      left: 25px;
+      bottom: 5px;
+      width: 40px;
+      background: inherit;
+      height: 10px;
+      border-radius: 2px 10px 10px 2px;
+      box-shadow: 1px -9px 0 1px #ffffff, 2px -19px 0 2px #ffffff, 3px -29px 0 3px #ffffff; }
+  .emoji--like .emoji__thumb {
+    border-bottom: 20px solid #ffffff;
+    border-left: 20px solid transparent;
+    top: -25px;
+    right: -25px;
+    z-index: 2;
+    transform: rotate(5deg);
+    transform-origin: 0% 100%;
+    animation: thumbs-up 2s linear infinite; }
+    .emoji--like .emoji__thumb:before {
+      border-radius: 50% 50% 0 0;
+      background: #ffffff;
+      width: 10px;
+      height: 12px;
+      left: -10px;
+      top: -8px;
+      transform: rotate(-15deg);
+      transform-origin: 100% 100%;
+      box-shadow: -1px 4px 0 -1px #ffffff; }
+
+.emoji--love {
+  background: #f55064; }
+  .emoji--love:after {
+    content: "Love";
+    color: white; }
+  .emoji--love .emoji__heart {
+    left: calc(50% - 40px);
+    top: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    animation: heart-beat 1s linear infinite alternate; }
+    .emoji--love .emoji__heart:before, .emoji--love .emoji__heart:after {
+      left: calc(50% - 20px);
+      top: calc(50% - 32px);
+      width: 40px;
+      height: 64px;
+      background: #ffffff;
+      border-radius: 20px 20px 0 0; }
+    .emoji--love .emoji__heart:before {
+      transform: translate(20px) rotate(-45deg);
+      transform-origin: 0 100%; }
+    .emoji--love .emoji__heart:after {
+      transform: translate(-20px) rotate(45deg);
+      transform-origin: 100% 100%; }
+
+.emoji--haha:after {
+  content: "Joy";
+  color: white; }
+
+.emoji--haha .emoji__face {
+  animation: haha-face 2s linear infinite; }
+
+.emoji--haha .emoji__eyes {
+  width: 26px;
+  height: 6px;
+  border-radius: 2px;
+  left: calc(50% - 13px);
+  top: 35px;
+  transform: rotate(20deg);
+  background: transparent;
+  box-shadow: -25px 5px 0 0 #000000, 25px -5px 0 0 #000000; }
+  .emoji--haha .emoji__eyes:after {
+    left: 0;
+    top: 0;
+    width: 26px;
+    height: 6px;
+    border-radius: 2px;
+    transform: rotate(-40deg);
+    background: transparent;
+    box-shadow: -25px -5px 0 0 #000000, 25px 5px 0 0 #000000; }
+
+.emoji--haha .emoji__mouth {
+  width: 80px;
+  height: 40px;
+  left: calc(50% - 40px);
+  top: 50%;
+  background: #000000;
+  border-radius: 0 0 40px 40px;
+  overflow: hidden;
+  z-index: 1;
+  animation: haha-mouth 2s linear infinite; }
+
+.emoji--haha .emoji__tongue {
+  width: 70px;
+  height: 30px;
+  background: #f55064;
+  left: calc(50% - 35px);
+  bottom: -10px;
+  border-radius: 50%; }
+
+.emoji--yay:after {
+  content: "Joy";
+  color: white;
+  animation: yay-reverse 1s linear infinite; }
+
+.emoji--yay .emoji__face {
+  animation: yay 1s linear infinite alternate; }
+
+.emoji--yay .emoji__eyebrows {
+  left: calc(50% - 3px);
+  top: 30px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: -6px 0 0 0 #000000, -36px 0 0 0px #000000, 6px 0 0 0 #000000, 36px 0 0 0px #000000; }
+  .emoji--yay .emoji__eyebrows:before, .emoji--yay .emoji__eyebrows:after {
+    width: 36px;
+    height: 18px;
+    border-radius: 60px 60px 0 0;
+    background: transparent;
+    border: 6px solid black;
+    box-sizing: border-box;
+    border-bottom: 0;
+    bottom: 3px;
+    left: calc(50% - 18px); }
+  .emoji--yay .emoji__eyebrows:before {
+    margin-left: -21px; }
+  .emoji--yay .emoji__eyebrows:after {
+    margin-left: 21px; }
+
+.emoji--yay .emoji__mouth {
+  top: 60px;
+  background: transparent;
+  left: 50%; }
+  .emoji--yay .emoji__mouth:after {
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 40px);
+    top: -75px;
+    border-radius: 50%;
+    background: transparent;
+    border: 6px solid #000000;
+    box-sizing: border-box;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    z-index: 1; }
+  .emoji--yay .emoji__mouth:before {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border-radius: 50%;
+    bottom: 5px;
+    left: calc(50% - 3px);
+    box-shadow: -25px 0 0 0 #000000, 25px 0 0 0 #000000, -35px -2px 30px 10px #d5234c, 35px -2px 30px 10px #d5234c; }
+
+.emoji--wow:after {
+  content: "Surprise";
+  color: white; }
+
+.emoji--wow .emoji__face {
+  animation: wow-face 3s linear infinite; }
+
+.emoji--wow .emoji__eyebrows {
+  left: calc(50% - 3px);
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: -18px 0 0 0 #000000, -33px 0 0 0 #000000, 18px 0 0 0 #000000, 33px 0 0 0 #000000;
+  animation: wow-brow 3s linear infinite; }
+  .emoji--wow .emoji__eyebrows:before, .emoji--wow .emoji__eyebrows:after {
+    width: 24px;
+    height: 20px;
+    border: 6px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    top: -3px;
+    left: calc(50% - 12px); }
+  .emoji--wow .emoji__eyebrows:before {
+    margin-left: -25px; }
+  .emoji--wow .emoji__eyebrows:after {
+    margin-left: 25px; }
+
+.emoji--wow .emoji__eyes {
+  width: 16px;
+  height: 24px;
+  left: calc(50% - 8px);
+  top: 35px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 25px 0 0 0 #000000, -25px 0 0 0 #000000; }
+
+.emoji--wow .emoji__mouth {
+  width: 30px;
+  height: 45px;
+  left: calc(50% - 15px);
+  top: 50%;
+  border-radius: 50%;
+  background: #000000;
+  animation: wow-mouth 3s linear infinite; }
+
+.emoji--sad:after {
+  content: "Sadnnes";
+  color: white; }
+
+.emoji--sad .emoji__face {
+  animation: sad-face 2s ease-in infinite; }
+
+.emoji--sad .emoji__eyebrows {
+  left: calc(50% - 3px);
+  top: 35px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: -40px 9px 0 0 #000000, -25px 0 0 0 #000000, 25px 0 0 0 #000000, 40px 9px 0 0 #000000; }
+  .emoji--sad .emoji__eyebrows:before, .emoji--sad .emoji__eyebrows:after {
+    width: 30px;
+    height: 20px;
+    border: 6px solid #000000;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    top: 2px;
+    left: calc(50% - 15px); }
+  .emoji--sad .emoji__eyebrows:before {
+    margin-left: -30px;
+    transform: rotate(-30deg); }
+  .emoji--sad .emoji__eyebrows:after {
+    margin-left: 30px;
+    transform: rotate(30deg); }
+
+.emoji--sad .emoji__eyes {
+  width: 14px;
+  height: 16px;
+  left: calc(50% - 7px);
+  top: 50px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 25px 0 0 0 #000000, -25px 0 0 0 #000000; }
+  .emoji--sad .emoji__eyes:after {
+    background: #548dff;
+    width: 12px;
+    height: 12px;
+    margin-left: 6px;
+    border-radius: 0 100% 40% 50% / 0 50% 40% 100%;
+    transform-origin: 0% 0%;
+    animation: tear-drop 2s ease-in infinite; }
+
+.emoji--sad .emoji__mouth {
+  width: 60px;
+  height: 80px;
+  left: calc(50% - 30px);
+  top: 80px;
+  box-sizing: border-box;
+  border: 6px solid #000000;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  background: transparent;
+  animation: sad-mouth 2s ease-in infinite; }
+  .emoji--sad .emoji__mouth:after {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+    border-radius: 50%;
+    top: 4px;
+    left: calc(50% - 3px);
+    box-shadow: -18px 0 0 0 #000000, 18px 0 0 0 #000000; }
+
+.emoji--angry {
+  background: linear-gradient(#d5234c -10%, #ffda6a);
+  background-size: 100%;
+  animation: angry-color 2s ease-in infinite; }
+  .emoji--angry:after {
+    content: "Angry";
+    color: white; }
+  .emoji--angry .emoji__face {
+    animation: angry-face 2s ease-in infinite; }
+  .emoji--angry .emoji__eyebrows {
+    left: calc(50% - 3px);
+    top: 55px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: -44px 5px 0 0 #000000, -7px 16px 0 0 #000000, 7px 16px 0 0 #000000, 44px 5px 0 0 #000000; }
+    .emoji--angry .emoji__eyebrows:before, .emoji--angry .emoji__eyebrows:after {
+      width: 50px;
+      height: 20px;
+      border: 6px solid #000000;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      top: 0;
+      left: calc(50% - 25px); }
+    .emoji--angry .emoji__eyebrows:before {
+      margin-left: -25px;
+      transform: rotate(15deg); }
+    .emoji--angry .emoji__eyebrows:after {
+      margin-left: 25px;
+      transform: rotate(-15deg); }
+  .emoji--angry .emoji__eyes {
+    width: 12px;
+    height: 12px;
+    left: calc(50% - 6px);
+    top: 70px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: 25px 0 0 0 #000000, -25px 0 0 0 #000000; }
+  .emoji--angry .emoji__mouth {
+    width: 36px;
+    height: 18px;
+    left: calc(50% - 18px);
+    bottom: 15px;
+    background: #000000;
+    border-radius: 50%;
+    animation: angry-mouth 2s ease-in infinite; }
+
+@keyframes heart-beat {
+  25% {
+    transform: scale(1.1); }
+  75% {
+    transform: scale(0.6); } }
+
+@keyframes haha-face {
+  10% {
+    transform: translateY(25px); }
+  20% {
+    transform: translateY(15px); }
+  30% {
+    transform: translateY(25px); }
+  40% {
+    transform: translateY(15px); }
+  50% {
+    transform: translateY(25px); }
+  60% {
+    transform: translateY(0); }
+  70% {
+    transform: translateY(-10px); }
+  80% {
+    transform: translateY(0); }
+  90% {
+    transform: translateY(-10px); } }
+
+@keyframes haha-mouth {
+  10% {
+    transform: scale(0.6);
+    top: 45%; }
+  20% {
+    transform: scale(0.8);
+    top: 45%; }
+  30% {
+    transform: scale(0.6);
+    top: 45%; }
+  40% {
+    transform: scale(0.8);
+    top: 45%; }
+  50% {
+    transform: scale(0.6);
+    top: 45%; }
+  60% {
+    transform: scale(1);
+    top: 50%; }
+  70% {
+    transform: scale(1.2);
+    top: 50%; }
+  80% {
+    transform: scale(1);
+    top: 50%; }
+  90% {
+    transform: scale(1.1);
+    top: 50%; } }
+
+@keyframes yay {
+  25% {
+    transform: rotate(-15deg); }
+  75% {
+    transform: rotate(15deg); } }
+
+@keyframes wow-face {
+  15%,
+  25% {
+    transform: rotate(20deg) translateX(-25px); }
+  45%,
+  65% {
+    transform: rotate(-20deg) translateX(25px); }
+  75%,
+  100% {
+    transform: rotate(0deg) translateX(0); } }
+
+@keyframes wow-brow {
+  15%,
+  65% {
+    top: 25px; }
+  75%,
+  100%,
+  0% {
+    top: 15px; } }
+
+@keyframes wow-mouth {
+  10%,
+  30% {
+    width: 20px;
+    height: 20px;
+    left: calc(50% - 10px); }
+  50%,
+  70% {
+    width: 30px;
+    height: 40px;
+    left: calc(50% - 15px); }
+  75%,
+  100% {
+    height: 50px; } }
+
+@keyframes sad-face {
+  25%,
+  35% {
+    top: -15px; }
+  55%,
+  95% {
+    top: 10px; }
+  100%,
+  0% {
+    top: 0; } }
+
+@keyframes sad-mouth {
+  25%,
+  35% {
+    transform: scale(0.85);
+    top: 70px; }
+  55%,
+  100%,
+  0% {
+    transform: scale(1);
+    top: 80px; } }
+
+@keyframes tear-drop {
+  0%,
+  100% {
+    display: block;
+    left: 35px;
+    top: 15px;
+    transform: rotate(45deg) scale(0); }
+  25% {
+    display: block;
+    left: 35px;
+    transform: rotate(45deg) scale(2); }
+  49.9% {
+    display: block;
+    left: 35px;
+    top: 65px;
+    transform: rotate(45deg) scale(0); }
+  50% {
+    display: block;
+    left: -35px;
+    top: 15px;
+    transform: rotate(45deg) scale(0); }
+  75% {
+    display: block;
+    left: -35px;
+    transform: rotate(45deg) scale(2); }
+  99.9% {
+    display: block;
+    left: -35px;
+    top: 65px;
+    transform: rotate(45deg) scale(0); } }
+
+@keyframes hands-up {
+  25% {
+    transform: rotate(15deg); }
+  50% {
+    transform: rotate(-15deg) translateY(-10px); }
+  75%,
+  100% {
+    transform: rotate(0deg); } }
+
+@keyframes thumbs-up {
+  25% {
+    transform: rotate(20deg); }
+  50%,
+  100% {
+    transform: rotate(5deg); } }
+
+@keyframes angry-color {
+  45%,
+  60% {
+    background-size: 250%; }
+  85%,
+  100%,
+  0% {
+    background-size: 100%; } }
+
+@keyframes angry-face {
+  35%,
+  60% {
+    transform: translateX(0) translateY(10px) scale(0.9); }
+  40% {
+    transform: translateX(-5px) translateY(10px) scale(0.9); }
+  45% {
+    transform: translateX(5px) translateY(10px) scale(0.9); }
+  50% {
+    transform: translateX(-5px) translateY(10px) scale(0.9); }
+  55% {
+    transform: translateX(5px) translateY(10px) scale(0.9); } }
+
+@keyframes angry-mouth {
+  25%,
+  50% {
+    height: 6px;
+    bottom: 25px; } }
+
+@media (max-width: 800px) {
+  #header-home h1 {
+    font-size: 3rem; }
+  #header-home p {
+    font-size: 0.6rem; }
+  .containe {
+    width: 15rem;
+    padding: 25px 25px 0px 25px; }
+  .btn-sub {
+    margin: 4px;
+    padding: 5px; } }
+
+@media (max-width: 400px) {
+  #header-home .toggler, #header-twitter .toggler {
+    display: block; }
+  #header-home h1, #header-twitter h1 {
+    visibility: hidden; }
+  #header-home p, #header-twitter p {
+    font-size: 0.4rem;
+    visibility: hidden; }
+  .container {
+    max-width: 400x;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem; }
+  section a {
+    font-size: 0.9rem; }
+  section .section-title {
+    font-size: 1rem; }
+  .result {
+    position: absolute;
+    bottom: 5%;
+    left: 35%; }
+    .result p {
+      font-size: 50px; }
+  #main-nav {
+    padding-top: 1rem; }
+    #main-nav ul {
+      display: block; }
+      #main-nav ul li {
+        display: block;
+        padding: 1rem 1.5rem; }
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1; }
+    .menu-wrap h2 {
+      position: fixed;
+      left: 10%; }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0; }
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  /* shugamuud */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease; }
+  .menu-wrap .hamburger > div:before,
+  .menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit; }
+  .menu-wrap .hamburger > div:after {
+    top: 10px; }
+  /* toggler animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg); }
+  /* shugamuudiig X bolgoh */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg); }
+  /* Tses daragdsan bolon mouse ochih ued erguuleh */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg); }
+  /* Overlay menu-g haruulah */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible; }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.75s; }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.3s; }
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menu-wrap .menu > div {
+    background: rgba(24, 39, 51, 0.85);
+    border-radius: 50%;
+    width: 300vw;
+    height: 300vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease; }
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4 ease; }
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem; }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease; }
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: rgba(229, 148, 0, 0.9); } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+h2 {
+  text-transform: uppercase; }
+
+img {
+  width: 100%; }
+
+.toggler {
+  display: none; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem; }
+  #main-nav #logo {
+    font-family: 'Corinthia', cursive;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase; }
+  #main-nav ul {
+    display: flex;
+    justify-content: right;
+    list-style: none; }
+    #main-nav ul li {
+      display: flex;
+      padding: 1rem 1.5rem; }
+    #main-nav ul li:last-child a {
+      align-self: right; }
+
+.contain {
+  display: flex; }
+
+.nav-btn {
+  text-decoration: none;
+  color: #fff;
+  text-decoration: uppercase;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s; }
+  .nav-btn:hover {
+    border-color: #ccc; }
+  .nav-btn.current {
+    border-color: #f77c09e8; }
+
+#header-home {
+  background: #48abfc;
+  height: 100vh;
+  color: #fff; }
+  #header-home .header-content {
+    text-align: center;
+    padding-top: 20%; }
+  #header-home h1 {
+    font-size: 4rem;
+    line-height: 1.2; }
+
+#header-twitter {
+  background: url("/static/img/alexander-shatov-SXfwXS0jWNg-unsplash.jpg") no-repeat center center/cover;
+  height: 100vh;
+  color: #075eaa; }
+  #header-twitter .header-content {
+    text-align: center;
+    padding-top: 20%; }
+  #header-twitter h1 {
+    font-size: 4rem;
+    line-height: 1.2; }
+  #header-twitter .m {
+    color: white; }
+
+.containe {
+  background-color: #ffffff;
+  width: 30rem;
+  min-height: 3rem;
+  padding: 40px 40px 0px 40px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 30px; }
+  .containe p {
+    width: 100%;
+    text-align: right;
+    margin-top: -30px;
+    padding-right: 10px;
+    color: #000000c2; }
+
+.containe * {
+  font-size: 16px; }
+
+.tail::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 50px solid #fff;
+  border-left: 50px solid transparent;
+  border-right: 22px solid transparent;
+  border-top: 50px solid #fff;
+  border-bottom: 20px solid transparent;
+  transform: rotate(300deg);
+  left: -10px;
+  bottom: -34px; }
+
+.bird::after {
+  background: url("/static/img/emojipng.com-728107.png") no-repeat;
+  width: 200px;
+  height: 200px;
+  background-size: 150px;
+  content: "";
+  position: absolute;
+  left: -180px;
+  bottom: -210px; }
+
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  padding: 20px;
+  color: #080808;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background-color: white; }
+
+.btn-sub {
+  margin: 4px;
+  padding: 10px;
+  border: 2px solid #330c7200;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  left: 53%;
+  overflow: hidden;
+  transition: all 0.4s;
+  color: #144f57e5;
+  background: #ffffff00; }
+  .btn-sub:hover {
+    border: 2px solid #000000;
+    border-radius: 30px;
+    color: #000000; }
+
+.pos-icon {
+  color: rgba(75, 250, 40, 0.842); }
+
+.neg-icon {
+  color: rgba(209, 32, 9, 0.884); }
+
+.net-icon {
+  color: yellow; }
+
+.result {
+  display: block;
+  position: absolute;
+  margin-top: 2rem;
+  left: 70%;
+  bottom: 33%;
+  padding: 0 10px 0px 10px; }
+
+.bg-ligth {
+  color: #1df82f;
+  margin-top: 2rem; }
+
+.twtid {
+  background: url("/static/img/blue_twit.jpg") no-repeat center center/cover;
+  height: 150vh; }
+
+.twturl {
+  background: url("/static/img/blue_twit.jpg") no-repeat center center/cover;
+  height: 150vh; }
+
+.twtkey {
+  background: url("/static/img/blue_twit.jpg") no-repeat center center/cover;
+  height: 150vh; }
+
+#home-c {
+  color: #fff;
+  background: url("/static/img/blue_twit.jpg") no-repeat center center/cover; }
+  #home-c a {
+    color: #fff;
+    transition: all 1s; }
+  #home-c a:hover {
+    color: #f77c09e8; }
+  #home-c .process {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    text-align: center;
+    padding-bottom: 5rem; }
+    #home-c .process p {
+      color: #fafafa;
+      padding: 0 2rem; }
+    #home-c .process-icon {
+      border-radius: 50%;
+      background: rgba(169, 169, 169, 0.459);
+      color: #fff;
+      padding: 2rem;
+      line-height: 70px;
+      text-align: center;
+      position: relative;
+      transition: all 1s; }
+      #home-c .process-icon:hover {
+        background: #f77c09e8;
+        padding: 3rem; }
+
+.header-content {
+  transform: none; }
+
+@keyframes tweet {
+  100% {
+    background-position: -600px 0; } }
+
+@keyframes animate1 {
+  from {
+    top: -50px; }
+  to {
+    top: 0; } }
+
+@media (max-width: 800px) {
+  #header-home h1 {
+    font-size: 3rem; }
+  #header-home p {
+    font-size: 0.6rem; }
+  .containe {
+    width: 15rem;
+    padding: 25px 25px 0px 25px; }
+  .btn-sub {
+    margin: 4px;
+    padding: 5px; } }
+
+@media (max-width: 400px) {
+  #header-home .toggler, #header-twitter .toggler {
+    display: block; }
+  #header-home h1, #header-twitter h1 {
+    visibility: hidden; }
+  #header-home p, #header-twitter p {
+    font-size: 0.4rem;
+    visibility: hidden; }
+  .container {
+    max-width: 400x;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem; }
+  section a {
+    font-size: 0.9rem; }
+  section .section-title {
+    font-size: 1rem; }
+  .result {
+    position: absolute;
+    bottom: 5%;
+    left: 35%; }
+    .result p {
+      font-size: 50px; }
+  #main-nav {
+    padding-top: 1rem; }
+    #main-nav ul {
+      display: block; }
+      #main-nav ul li {
+        display: block;
+        padding: 1rem 1.5rem; }
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1; }
+    .menu-wrap h2 {
+      position: fixed;
+      left: 10%; }
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0; }
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  /* shugamuud */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease; }
+  .menu-wrap .hamburger > div:before,
+  .menu-wrap .hamburger > div:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit; }
+  .menu-wrap .hamburger > div:after {
+    top: 10px; }
+  /* toggler animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg); }
+  /* shugamuudiig X bolgoh */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg); }
+  /* Tses daragdsan bolon mouse ochih ued erguuleh */
+  .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg); }
+  /* Overlay menu-g haruulah */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible; }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: 0.75s; }
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.3s; }
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .menu-wrap .menu > div {
+    background: rgba(24, 39, 51, 0.85);
+    border-radius: 50%;
+    width: 300vw;
+    height: 300vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease; }
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4 ease; }
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem; }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease; }
+  .menu-wrap .menu > div > div > ul > li > a:hover {
+    color: rgba(229, 148, 0, 0.9); } }
